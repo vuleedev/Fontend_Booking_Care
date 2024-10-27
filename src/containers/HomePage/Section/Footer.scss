@@ -1,0 +1,27 @@
+.footer-container {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+  
+    .footer-content {
+      text-align: center;
+  
+      .copyright {
+        font-size: 14px;
+        color: #666;
+      }
+  
+      .channel-link {
+        color: #45c3d2;
+        text-decoration: none;
+        font-weight: 500;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }

@@ -1,0 +1,243 @@
+.home-header-container {
+  height: 60px;
+  width: 100%;
+  position: sticky; top:0;
+  background: white;
+  z-index: 10;
+
+  .home-header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .left-content {
+      width: 25%;
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 25px;
+        color: grey;
+        cursor: pointer;
+        padding: 0 10px;
+      }
+
+      .header-logo {
+        background: url("../../assets/logo.svg") center no-repeat;
+        background-size: contain;
+        height: 80%;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .center-content {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+
+      .child-content {
+        .sub-title {
+          font-weight: 400;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right-content {
+      width: 25%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .support {
+        padding-right: 50px;
+        display: flex;
+        align-items: center;
+
+        i {
+          font-size: 15px;
+          margin-right: 5px;
+        }
+      }
+
+      .language-vi {
+        cursor: pointer;
+        opacity: 0.2;
+
+        &.active {
+          opacity: 1;
+
+          span {
+            color: orange;
+          }
+        }
+      }
+
+      .language-en {
+        margin: 0 10px;
+        cursor: pointer;
+        opacity: 0.2;
+
+        &.active {
+          opacity: 1;
+
+          span {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-header-banner {
+  background-image: url('../../assets/logo\ banner\ hospital.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vl;
+  display: flex;
+  flex-direction: column;
+
+  .content-up {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    .title1 {
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: whitesmoke;
+      text-shadow: 1px 1px 1px #333;
+    }
+
+    .title2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+      color: whitesmoke;
+      text-shadow: 1px 1px 1px #333;
+    }
+
+    .search {
+      position: relative;
+      width: 60%;
+      max-width: 600px;
+
+      input[type="text"] {
+        width: 100%;
+        padding: 15px 50px 15px 20px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      .fas.fa-search {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #333;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content-down {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; // Tăng padding để có thêm không gian
+
+    .option {
+      display: flex;
+      gap: 50px; // Tăng khoảng cách giữa các option
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 900px; // Giới hạn chiều rộng tối đa để kiểm soát layout
+
+      .option-child {
+        width: 120px; // Tăng kích thước một chút
+        height: 120px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); // Thêm shadow để nổi bật
+
+        &:hover {
+          background-color: #45c3d2;
+          transform: translateY(-5px); // Thêm hiệu ứng nổi lên khi hover
+
+          .text-child {
+            color: white;
+          }
+        }
+
+        .icon-child {
+          font-size: 36px; // Tăng kích thước icon
+          color: #45c3d2;
+          transition: all 0.3s ease;
+          margin-bottom: 10px; // Thêm khoảng cách giữa icon và text
+        }
+
+        .text-child {
+          font-size: 11px; // Tăng kích thước chữ
+          font-weight: 500;
+          text-align: center;
+          padding: 0 5px;
+        }
+
+        &:hover .icon-child {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header-banner {
+    .content-down {
+      padding: 20px;
+
+      .option {
+        gap: 30px;
+
+        .option-child {
+          width: 100px;
+          height: 100px;
+
+          .icon-child {
+            font-size: 32px;
+          }
+
+          .text-child {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
