@@ -9,7 +9,6 @@ import "./Header.scss";
 class Header extends Component {
   render() {
     const { processLogout, userInfo } = this.props;
-    console.log("Check user info ", userInfo);
 
     return (
       <div className="header-container">

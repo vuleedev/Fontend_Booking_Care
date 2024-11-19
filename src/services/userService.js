@@ -23,3 +23,7 @@ export const editUserService = (inputData) => {
 export const getAllCodeService = (inputData) => {
   return axios.get(`/api/all-code?type=${inputData}`);
 };
+
+export const getTopDoctorHomeService = (limit) => {
+  return axios.get(`/api/get-top-doctor-home?limit=${limit}`);
+};
